@@ -1,1 +1,1 @@
-this repo contains bash scripts to mainpulate..
+this repo contains bash scripts to mainpulate regex expressions
