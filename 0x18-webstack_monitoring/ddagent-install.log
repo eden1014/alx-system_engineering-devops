@@ -1,0 +1,134 @@
+[34m
+* Datadog Agent 7 install script v1.11.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:3 http://security.ubuntu.com/ubuntu focal-security InRelease
+Ign:4 https://apt.datadoghq.com stable InRelease
+Hit:5 https://apt.datadoghq.com stable Release
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Ign:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages
+Ign:13 http://archive.ubuntu.com/ubuntu focal/universe Translation-en
+Ign:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [393 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.1 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1453 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [205 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [636 B]
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [23.2 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7316 B]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [592 B]
+Ign:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages
+Ign:13 http://archive.ubuntu.com/ubuntu focal/universe Translation-en
+Ign:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en
+Ign:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages
+Ign:13 http://archive.ubuntu.com/ubuntu focal/universe Translation-en
+Ign:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en
+Ign:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages
+Ign:13 http://archive.ubuntu.com/ubuntu focal/universe Translation-en
+Ign:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en
+Ign:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages
+Ign:13 http://archive.ubuntu.com/ubuntu focal/universe Translation-en
+Ign:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en
+Err:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages
+  Connection failed [IP: 185.125.190.39 80]
+Ign:13 http://archive.ubuntu.com/ubuntu focal/universe Translation-en
+Err:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages
+  404  Not Found [IP: 91.189.91.38 80]
+Ign:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages
+Ign:21 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en
+Fetched 114 kB in 10min 5s (187 B/s)
+Reading package lists...
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/universe/binary-amd64/Packages  Connection failed [IP: 185.125.190.39 80]
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/main/binary-amd64/Packages  404  Not Found [IP: 91.189.91.38 80]
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+[31m'apt-get update' failed, the script will not install the latest version of apt-transport-https.[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+gnupg is already the newest version (2.2.19-3ubuntu2.2).
+curl is already the newest version (7.68.0-1ubuntu2.14).
+apt-transport-https is already the newest version (2.0.2ubuntu0.2).
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+[34m
+* Installing APT package sources for Datadog
+[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0100  6226  100  6226    0     0   1026      0  0:00:06  0:00:06 --:--:--  1273
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0100  6226  100  6226    0     0    385      0  0:00:16  0:00:16 --:--:--  1281100  6226  100  6226    0     0    385      0  0:00:16  0:00:16 --:--:--  1614
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0100  9001  100  9001    0     0   4255      0  0:00:02  0:00:02 --:--:--  4255
+gpg: key D3A80E30382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+[34m
+* Installing the Datadog Agent package
+[0m
+Ign:1 https://apt.datadoghq.com stable InRelease
+Hit:2 https://apt.datadoghq.com stable Release
+Reading package lists...
+  [33mInstalling package: datadog-agent
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  datadog-agent datadog-signing-keys
+0 upgraded, 2 newly installed, 0 to remove and 13 not upgraded.
+Need to get 292 MB of archives.
+After this operation, 944 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.40.1-1 [292 MB]
+Err:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.40.1-1
+  Could not connect to apt.datadoghq.com:443 (13.225.239.69). - connect (101: Network is unreachable) Could not connect to apt.datadoghq.com:443 (13.225.239.49). - connect (101: Network is unreachable) Could not connect to apt.datadoghq.com:443 (13.225.239.29). - connect (101: Network is unreachable) Could not connect to apt.datadoghq.com:443 (13.225.239.95). - connect (101: Network is unreachable) [IP: 13.225.239.95 443]
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.1.0-1
+Err:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.1.0-1
+  Unable to connect to apt.datadoghq.com:https: [IP: 13.225.239.95 443]
+W: --force-yes is deprecated, use one of the options starting with --allow instead.
+E: Failed to fetch https://apt.datadoghq.com/pool/d/da/datadog-agent_7.40.1-1_amd64.deb  Could not connect to apt.datadoghq.com:443 (13.225.239.69). - connect (101: Network is unreachable) Could not connect to apt.datadoghq.com:443 (13.225.239.49). - connect (101: Network is unreachable) Could not connect to apt.datadoghq.com:443 (13.225.239.29). - connect (101: Network is unreachable) Could not connect to apt.datadoghq.com:443 (13.225.239.95). - connect (101: Network is unreachable) [IP: 13.225.239.95 443]
+E: Failed to fetch https://apt.datadoghq.com/pool/d/da/datadog-signing-keys_1.1.0-1_all.deb  Unable to connect to apt.datadoghq.com:https: [IP: 13.225.239.95 443]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+[31mERROR
+Failed to install the datadog-agent package, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Datadog Agent.
+
+Troubleshooting and basic usage information for the Datadog Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+[0m
+Do you want to send a failure report to Datadog (including ddagent-install.log)? (y/[n]) 
+If you are still having problems, please send an email to support@datadoghq.com
+with the contents of ddagent-install.log and any information you think would be
+useful and we will do our very best to help you solve your problem.
